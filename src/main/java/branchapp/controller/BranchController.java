@@ -14,8 +14,8 @@ import java.util.List;
 @Controller
 public class BranchController {
 
-    @PersistenceContext
-    private EntityManager em;
+/*    @PersistenceContext
+    private EntityManager em;*/
 
     @RequestMapping("/")
     public String home(Model model) throws IOException {

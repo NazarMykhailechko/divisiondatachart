@@ -328,20 +328,33 @@
 <script>
 
     var seconds = 0;
+    var seconds1 = 0;
+    var seconds2 = 0;
+    var seconds3 = 0;
+    var seconds4 = 0;
+
     var el = document.getElementById('seconds-counter');
 
-    function incrementSeconds() {
-        seconds += 1;
-        el.innerText = "You have been here for " + seconds + " seconds.";
-    }
 
-    var cancel = setInterval(incrementSeconds, 1000);
 
     const button = document.querySelector("#butt");
     const icon = document.querySelector("#butt > i");
     const audio = document.querySelector("audio");
 
     button.addEventListener("click", () => {
+
+        var data = [
+            ["John", 12000],
+            ["Jake", 11000],
+            ["Peter", 10000],
+            ["James", 15000],
+            ["Mary", 14000]
+        ];
+
+        let chart = anychart.bar();
+        let series = chart.bar(data);
+        chart.container("container");
+        chart.draw();
 
 
         if (audio.paused) {
@@ -350,11 +363,52 @@
         } else {
             audio.pause();
         }
+
+        var cancel = setInterval(incrementSeconds, 2000);
+
+        function incrementSeconds() {
+
+
+            seconds += 70;
+            seconds1 += 100;
+            seconds2 += 50;
+            seconds3 += 150;
+            seconds4 += 80;
+            el.innerText = "You have been here for " + seconds + " seconds.";
+
+            let data = [
+                ["John", 12000 + seconds1],
+                ["Jake", 11000 + seconds4],
+                ["Peter", 10000 + seconds3],
+                ["James", 15000 + seconds2],
+                ["Mary", 14000 + seconds]
+            ];
+
+            showChart(data);
+        }
+
+        function showChart(selectedvalue) {
+            /*            $.getJSON('${pageContext.request.contextPath}/api/clients/findallmanagerstatusforchart/' + selectedvalue, function(data) {
+
+                chart.data(data);
+                chart.container('container');
+                chart.draw();
+                })*/
+
+            console.log(selectedvalue);
+
+            var data = selectedvalue;
+
+            chart.data(data);
+            chart.container('container');
+            chart.draw();
+        }
+
     });
 
     window.addEventListener('DOMContentLoaded', function() {
 
-        var data = [
+/*        var data = [
             ["John", 10000],
             ["Jake", 12000],
             ["Peter", 13000],
@@ -363,15 +417,9 @@
         ];
 
         let chart = anychart.bar();
-
-// create a bar series and set the data
         let series = chart.bar(data);
-
-// set the container id
         chart.container("container");
-
-// initiate drawing the chart
-        chart.draw();
+        chart.draw();*/
 
         //init chart
 /*
@@ -391,7 +439,6 @@
         const selectElem = document.querySelector('#dat');
         selectElem.addEventListener('click', event => {
             //showChartFor(event.target.value);
-            showChartFor(event.target.value);
         });
         //showChartFor(selectElem.value);
 
@@ -403,13 +450,9 @@
                 chart.draw();
                 })*/
 
-            var data = [
-                ["John", 12000],
-                ["Jake", 11000],
-                ["Peter", 10000],
-                ["James", 15000],
-                ["Mary", 14000]
-            ];
+           console.log(selectedvalue);
+
+            var data = selectedvalue;
 
             chart.data(data);
             chart.container('container');
@@ -471,6 +514,8 @@
             }*/
         }
     });
+
+
 
 </script>
 

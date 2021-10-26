@@ -7,5 +7,11 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/divisionchartdata?serverTimezone=UTC&amp;reconnect=true&amp;useUnicode=yes&amp;characterEncoding=UTF-8</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="jdbc:mysql://bbd755977c8298:f1fc8b8e@eu-cdbr-west-01.cleardb.com/heroku_0d9417317f0a38d?serverTimezone=UTC&amp;reconnect=true&amp;useUnicode=yes&amp;characterEncoding=UTF-8" uuid="a0fae7e9-9915-46f7-8e9b-0a6a69cc6a12">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://bbd755977c8298:f1fc8b8e@eu-cdbr-west-01.cleardb.com/heroku_0d9417317f0a38d?serverTimezone=UTC&amp;reconnect=true&amp;useUnicode=yes&amp;characterEncoding=UTF-8</jdbc-url>
+    </data-source>
   </component>
 </project>
