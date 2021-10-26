@@ -31,7 +31,7 @@
     <script type="text/javascript">
 
 
-        $(document).ready(function() {
+/*        $(document).ready(function() {
       anychart.onDocumentLoad(function() {
 
             chart = anychart.pie([]);
@@ -46,7 +46,7 @@
             chart.draw();
 
           });
-        });
+        });*/
 
     </script>
 
@@ -313,17 +313,17 @@
     <img class="text" src="data:image/svg+xml;base64,PHN2ZyBpZD0ibC11LWciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTg3LjdweCIgaGVpZ2h0PSI0NC44cHgiIHZpZXdCb3g9IjAgMCAxODcuNyA0NC44IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxODcuNyA0NC44OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7ZmlsbDojQ0MwMDAwO30NCgkuc3Qxe2ZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO2ZpbGw6Izk5OTk5OTt9DQo8L3N0eWxlPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTQzLjYsMjcuNUwyMi4xLDlMMC42LDI3LjVDMC4yLDI1LjgsMCwyNC4yLDAsMjIuNEMwLDEwLDkuOSwwLDIyLjEsMGMxMi4yLDAsMjIuMSwxMCwyMi4xLDIyLjQgQzQ0LjIsMjQuMiw0NCwyNS44LDQzLjYsMjcuNSBNMTAxLDM1LjFjMy41LDAsNS4yLTAuMiw2LjQtMC41YzIuNC0wLjcsNC0yLjMsNC44LTQuOGMwLjMtMC44LDAuNC0xLjUsMC40LTIuMiBjMC0yLjMtMC45LTQuNC0yLjYtNS45Yy0xLjYtMS40LTMuNi0yLTYtMmgtNC4xYy0wLjUsMC4xLTEsMC4zLTEuMiwwLjdjLTAuMiwwLjQtMC40LDAuOC0wLjUsMS4zdjE5LjZoMi44VjM1LjEgTTEwOC4yLDIyLjggYzAuOCwxLjMsMS4zLDMuMSwxLjMsNC45YzAsMS43LTAuNCwzLjEtMS4zLDQuNGMtMSwxLjQtMi4zLDIuMS0zLjksMi4xbC0zLjMsMFYyMS4xYzAtMC4zLDAuMi0wLjUsMC41LTAuNWwyLjcsMCBDMTA1LjksMjAuNSwxMDcuMywyMS4zLDEwOC4yLDIyLjh6IE04OC4yLDM1LjVjMi4zLDAsNC4yLTAuNyw1LjctMi4yYzEuNS0xLjUsMi4zLTMuNCwyLjMtNS44YzAtMi4zLTAuOC00LjItMi4zLTUuNiBjLTEuNS0xLjUtMy40LTIuMi01LjYtMi4yYy0yLjMsMC00LjIsMC43LTUuNiwyLjJjLTEuNSwxLjUtMi4yLDMuNC0yLjIsNS43YzAsMi4zLDAuNyw0LjIsMi4zLDUuN0M4NC4xLDM0LjgsODYsMzUuNSw4OC4yLDM1LjUgTTkyLjMsMzIuMWMtMSwxLjctMi4zLDIuNi00LDIuNmMtMS43LDAtMy0wLjgtNC0yLjNDODMuNSwzMSw4MywyOS40LDgzLDI3LjZjMC0xLjksMC40LTMuNSwxLjItNC45YzEtMS42LDIuMy0yLjQsNC0yLjQgYzEuNiwwLDIuOSwwLjcsMy45LDIuMmMwLjksMS4zLDEuMywyLjksMS4zLDQuNkM5My41LDI5LjEsOTMuMSwzMC43LDkyLjMsMzIuMXogTTcyLjgsMjQuNmw1LjUtNWgtMS4ybC02LjcsNi4xdi02LjFoLTIuOHYxNS41IGwyLjgtMC4xdi04LjJsMC41LTAuNWw2LjksOC44aDMuMUw3Mi44LDI0LjZ6IE01Ni4yLDEzbC05LjgsMjIuMWgxbDIuOC02LjNoMTBsMi44LDYuM2gzTDU2LjIsMTN6IE01MC43LDI3LjlsNC42LTEwLjNsNC41LDEwLjMgSDUwLjd6IE0xMTQuNSwzNC4ybDUtMTIuM2MwLjEtMC4yLDAuMy0wLjQsMC41LDBjMS42LDQsMy4zLDguMyw0LjksMTIuM0gxMTQuNXogTTExMi4xLDMzLjljMCwwLjUsMC4xLDAuOCwwLjEsMWMwLDAuNiwwLDEtMC4xLDEuMiBoMC4yYzAuMy0wLjMsMC42LTAuNSwxLjEtMC43YzAuNC0wLjEsMC45LTAuMiwxLjUtMC4zYzAuNiwwLDEuNCwwLDIuNSwwaDUuOGMxLjEsMCwyLjYsMCwzLjIsMGMwLjUsMCwxLDAuMSwxLjQsMC4zIGMwLjQsMC4xLDAuNywwLjQsMC45LDAuN2gwLjJjMC0wLjMtMC4xLTAuNy0wLjEtMS4yYzAtMC40LDAtMC43LDAuMS0xaC0xbC01LjUtMTMuMWMtMC4xLTAuMy0wLjMtMC42LTAuNS0wLjggCWMtMC4yLTAuMi0wLjQtMC40LTAuNi0wLjVjLTAuNS0wLjItMC45LTAuMi0xLjQsMGMtMC4yLDAuMS0wLjMsMC4yLTAuNSwwLjRjLTAuMiwwLjItMC4zLDAuNC0wLjUsMC42bC01LjgsMTMuM0gxMTIuMXoiLz4NCjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik01LjQsMzcuMWwxNi43LTIzbDE2LjcsMjNjLTQuMSw0LjctMTAsNy43LTE2LjcsNy43QzE1LjQsNDQuOCw5LjQsNDEuOCw1LjQsMzcuMSBNMTcyLDE5LjZoLTIuOHY2LjRoLTguMXYtNi40IGgtMi44djE1LjVoMi44di04LjJoOC4xdjguMmgyLjhWMTkuNnogTTE1Mi4xLDIxTDE1Mi4xLDIxYy0wLjItMC40LTAuNC0wLjctMC42LTAuOWMtMC4yLTAuMi0wLjUtMC40LTAuNy0wLjVjLTAuNC0wLjEtMC43LTAuMS0xLjEsMGMtMC4yLDAuMS0wLjQsMC4yLTAuNiwwLjRjLTAuNCwwLjQtMC42LDAuOS0wLjgsMS41bC00LjUsMTMuNmgxLjFsMS4yLTMuN2g2LjhsMS4yLDMuN2gyLjdMMTUyLjEsMjF6ICBNMTQ2LjQsMzAuNGMxLTMsMi02LDMtOWMwLTAuMSwwLjItMC4zLDAuMywwbDIuOCw5SDE0Ni40eiBNMTMxLDIxLjdjMC4xLTAuNSwwLjItMC45LDAuNS0xLjNjMC4zLTAuNSwwLjgtMC43LDEuNC0wLjhsNy44LDB2MC45IGMtMi4yLDAtNC40LDAtNi42LDBjLTAuMiwwLTAuMywwLjEtMC4zLDAuNGwwLDUuNmMwLjIsMCwwLjYsMCwxLjIsMGMwLjUsMCwwLjksMCwxLjIsMGMyLDAsMy41LDAuMiw0LjUsMC43IGMxLjUsMC43LDIuMiwxLjksMi4yLDMuN2MwLDEuMy0wLjUsMi40LTEuNiwzLjJjLTEsMC43LTIuMSwxLjEtMy41LDEuMUgxMzFWMjEuOEMxMzEsMjEuOCwxMzEsMjEuNywxMzEsMjEuN0wxMzEsMjEuNyBNMTM2LjksMjcuNSBjMSwwLDEuOSwwLjMsMi42LDAuOWMwLjcsMC42LDEuMSwxLjQsMS4xLDIuNGMwLDEtMC40LDEuOC0xLjEsMi40Yy0wLjcsMC42LTEuNiwwLjktMi42LDAuOWgtM3YtNi42SDEzNi45eiBNMTc5LjcsMjQuNmw1LjUtNSBsLTEuMiwwbC02LjcsNnYtNi4xaC0yLjh2MTUuNWwyLjgtMC4xdi04LjJsMC41LTAuNWw2LjksOC44aDMuMUwxNzkuNywyNC42eiIvPg0KPC9zdmc+">
 </div>
 
-
-
-<div id="container" style="position:absolute; top:25px; right:20px; width:500px; height:500px;"></div>
+<audio src="/ChiMai.mp3"></audio>
+<button id="butt">play</button>
+<div id="container" style="position:center; top:25px; right:20px; width:1500px; height:600px;"></div>
 <div id="seconds-counter"></div>
 <%--<select id="locality-dropdown" name="locality">
 </select>--%>
 
 <%--<h5 class="text">Created by Nazar Mykhailechko</h5>--%>
-<audio src="/ChiMai.mp3"></audio>
-<button id="butt">play</button>
-<button id="dat">change</button>
+
+
+<%--<button id="dat">change</button>--%>
 </body>
 <script>
 
@@ -336,7 +336,6 @@
     var el = document.getElementById('seconds-counter');
 
 
-
     const button = document.querySelector("#butt");
     const icon = document.querySelector("#butt > i");
     const audio = document.querySelector("audio");
@@ -344,15 +343,22 @@
     button.addEventListener("click", () => {
 
         var data = [
-            ["John", 12000],
-            ["Jake", 11000],
-            ["Peter", 10000],
-            ["James", 15000],
-            ["Mary", 14000]
+            ["Укргазбанк", 12000],
+            ["ОТП", 11000],
+            ["Акордбанк", 10000],
+            ["Приватбанк", 15000],
+            ["Ощадбанк", 14000],
+            ["Альфабанк", 8000],
+            ["Кредіагріколь", 5000],
+            ["Кредобанк", 2000],
+            ["Укрексімбанк", 3000],
+            ["Південний", 7000],
+            ["Таскомбанк", 4000],
+            ["Укрексімбанк", 9000]
         ];
 
         let chart = anychart.bar();
-        let series = chart.bar(data);
+        let series = chart.bar(data).color('crimson');
         chart.container("container");
         chart.draw();
 
@@ -376,13 +382,29 @@
             seconds4 += 80;
             el.innerText = "You have been here for " + seconds + " seconds.";
 
-            let data = [
+/*            let data = [
                 ["John", 12000 + seconds1],
                 ["Jake", 11000 + seconds4],
                 ["Peter", 10000 + seconds3],
                 ["James", 15000 + seconds2],
                 ["Mary", 14000 + seconds]
+            ];*/
+
+            var data = [
+                ["Укргазбанк", 12000 + seconds1],
+                ["ОТП", 11000 + seconds4],
+                ["Акордбанк", 10000 + seconds3],
+                ["Приватбанк", 15000 + seconds2],
+                ["Ощадбанк", 14000 + seconds],
+                ["Альфабанк", 8000 + seconds1],
+                ["Кредіагріколь", 5000 + seconds4],
+                ["Кредобанк", 2000 + seconds3],
+                ["Укрексімбанк", 3000 + seconds2],
+                ["Південний", 7000 + seconds],
+                ["Таскомбанк", 4000 + seconds1],
+                ["Укрексімбанк", 9000 + seconds3]
             ];
+
 
             showChart(data);
         }
@@ -400,15 +422,15 @@
             var data = selectedvalue;
 
             chart.data(data);
-            chart.container('container');
+            //chart.container('container');
             chart.draw();
         }
 
     });
 
-    window.addEventListener('DOMContentLoaded', function() {
+   /*window.addEventListener('DOMContentLoaded', function() {
 
-/*        var data = [
+        var data = [
             ["John", 10000],
             ["Jake", 12000],
             ["Peter", 13000],
@@ -419,11 +441,11 @@
         let chart = anychart.bar();
         let series = chart.bar(data);
         chart.container("container");
-        chart.draw();*/
+        chart.draw();
 
         //init chart
-/*
-        let chart = anychart.pie([{x: "пусто", value: 0}]);
+
+/!*        let chart = anychart.pie([{x: "пусто", value: 0}]);
         chart.labels().position("outside");
         let legend = chart.legend();
         legend.maxWidth("100%");
@@ -432,23 +454,23 @@
         legend.position("bottom");
         legend.paginator().orientation("bottom");
         chart.container("container");
-        chart.draw();
-*/
+        chart.draw();*!/
+
 
         //keep chart updated to match dropdown
-        const selectElem = document.querySelector('#dat');
+        const selectElem = document.querySelector('#butt');
         selectElem.addEventListener('click', event => {
             //showChartFor(event.target.value);
         });
         //showChartFor(selectElem.value);
 
-        function showChartFor(selectedvalue) {
-/*            $.getJSON('${pageContext.request.contextPath}/api/clients/findallmanagerstatusforchart/' + selectedvalue, function(data) {
+        /!*function showChartFor(selectedvalue) {
+           $.getJSON('${pageContext.request.contextPath}/api/clients/findallmanagerstatusforchart/' + selectedvalue, function(data) {
 
                 chart.data(data);
                 chart.container('container');
                 chart.draw();
-                })*/
+                });
 
            console.log(selectedvalue);
 
@@ -458,7 +480,7 @@
             chart.container('container');
             chart.draw();
 
-           /* $('#clientslistbymanager').DataTable({
+           /!* $('#clientslistbymanager').DataTable({
                 pageLength : 200,
                 ajax : {
                     url : '${pageContext.request.contextPath}/api/clients/findallmanagerbyname/' + selectedvalue,
@@ -511,9 +533,9 @@
                 ]
             });
 
-            }*/
-        }
-    });
+            }*!/
+        }*!/
+    });*/
 
 
 
