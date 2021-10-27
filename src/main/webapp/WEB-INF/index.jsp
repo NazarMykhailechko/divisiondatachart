@@ -117,10 +117,10 @@
         }
 
         body {
-            font-size: xx-small;
+            /*font-size: xx-small;*/
             /* 	font-family: 'Ubuntu', sans-serif; */
             /*font-weight: bold;*/
-            height: 85%;
+            /*//height: 85%;*/
         }
         .select2-container {
             min-width: 800px;
@@ -342,7 +342,7 @@
 <audio src="/ChiMai.mp3"></audio>
 <%--<button id="butt">play</button--%>
 <input id="butt" onclick="disableButton(this)" type="submit" value="Запустити презентацію" style="width: 98.9%;  margin-left: 8px;margin-top: 5px;background-color: crimson;color: white">
-<div id="container" style="position:center; top:25px; right:20px; width:1500px; margin-left: 8px">
+<div id="container" style="position:center; top:25px; right:20px; width:1500px; height: 600px; margin-left: 8px">
     <div id="seconds-counter"></div>
     <div id="hiddentext" class="textspec"  style="display:none">АКОРДБАНК відкрив 100 відділень!</div>
     <%--<div id="hiddentext" class="textspec" style="font-size:100px;display:none">Check</div>--%>
@@ -373,60 +373,17 @@
 
     button.addEventListener("click", () => {
 
-/*        var data = anychart.data.set([
-            ["Укргазбанк", 12000],
-            ["ОТП", 11000],
-            ["Акордбанк", 10000, "#009933", null, {enabled: true}],
-            ["Приватбанк", 15000],
-            ["Ощадбанк", 14000],
-            ["Альфабанк", 8000],
-            ["Кредіагріколь", 5000],
-            ["Кредобанк", 2000],
-            ["Укрексімбанк", 3000],
-            ["Південний", 7000],
-            ["Таскомбанк", 4000],
-            ["Укрексімбанк", 9000]
-        ]);*/
-
         var data =[{"x":"ОЩАДБАНК","value":4586},{"x":"ПРИВАТБАНК","value":2620},{"x":"РАЙФФАЙЗЕН БАНК АВАЛЬ","value":626},{"x":"УКРСИББАНК","value":458},{"x":"УКРГАЗБАНК","value":246},{"x":"ПУМБ","value":216},{"x":"АКЦЕНТ-БАНК","value":193},{"x":"ПРАВЕКС-БАНК","value":183},{"x":"МЕГАБАНК","value":177},{"x":"СБЕРБАНК","value":173},{"x":"КРЕДІ АГРІКОЛЬ БАНК","value":169},{"x":"ПІВДЕННИЙ","value":142},{"x":"УНІВЕРСАЛ БАНК","value":123},{"x":"ПРОМІНВЕСТБАНК","value":121},{"x":"КРЕДОБАНК","value":111},{"x":"АЛЬФА-БАНК","value":106},{"x":"УКРЕКСІМБАНК","value":103},{"x":"ПОЛТАВА-БАНК","value":97},{"x":"ОТП БАНК","value":86},{"x":"КРЕДИТ-ДНІПРО","value":85},{"x":"ІДЕЯ БАНК","value":83},{"x":"ПРОКРЕДИТ БАНК","value":69},{"x":"ТАСКОМБАНК","value":58},{"x":"КОМІНВЕСТБАНК","value":49},{"x":"АЙБОКС БАНК","value":48},{"x":"МЕТАБАНК","value":44},{"x":"МТБ БАНК","value":43},{"x":"ПЕРШИЙ ІНВЕСТИЦІЙНИЙ БАНК","value":37},{"x":"ІНДУСТРІАЛБАНК","value":37},{"x":"ВОСТОК","value":36}]
-        //var data =[{"x":"ОЩАДБАНК","value":4586,"fill":"#5cd65c","label":'enabled: true'},{"x":"ПРИВАТБАНК","value":2620,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"РАЙФФАЙЗЕН БАНК АВАЛЬ","value":626,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"УКРСИББАНК","value":458,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"УКРГАЗБАНК","value":246,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"ПУМБ","value":216,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"АКЦЕНТ-БАНК","value":193,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"ПРАВЕКС-БАНК","value":183,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"МЕГАБАНК","value":177,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"СБЕРБАНК","value":173,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"КРЕДІ АГРІКОЛЬ БАНК","value":169,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"ПІВДЕННИЙ","value":142,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"УНІВЕРСАЛ БАНК","value":123,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"ПРОМІНВЕСТБАНК","value":121,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"КРЕДОБАНК","value":111,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"АЛЬФА-БАНК","value":106,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"УКРЕКСІМБАНК","value":103,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"ПОЛТАВА-БАНК","value":97,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"ОТП БАНК","value":86,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"КРЕДИТ-ДНІПРО","value":85,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"ІДЕЯ БАНК","value":83,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"ПРОКРЕДИТ БАНК","value":69,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"ТАСКОМБАНК","value":58,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"КОМІНВЕСТБАНК","value":49,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"АЙБОКС БАНК","value":48,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"МЕТАБАНК","value":44,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"МТБ БАНК","value":43,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"ПЕРШИЙ ІНВЕСТИЦІЙНИЙ БАНК","value":37,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"ІНДУСТРІАЛБАНК","value":37,"fill":"#5cd65c","label":"{enabled: true}"},{"x":"ВОСТОК","value":36,"fill":"#5cd65c","label":"{enabled: true}"}]
 
-        //var seriesData_1 = data.mapAs({x: 0, value: 1, fill: 2, stroke: 3, label: 4});
-        /*var data = [
-            {x: "John", value: 10000},
-            {x: "Jake", value: 12000},
-            {x: "Peter", value: 13000,
-                normal:   {
-                    fill: "#d6d45c",
-                    stroke: null,
-                    label: {enabled: true}
-                },
-                hovered:  {
-                    fill: "#d6d45c",
-                    stroke: null,
-                    label: {enabled: true}
-                },
-                selected: {
-                    fill: "#d6d45c",
-                    stroke: null,
-                    label: {enabled: true}
-                }
-            },
-            {x: "James", value: 10000},
-            {x: "Mary", value: 9000}
-        ];*/
 
         let chart = anychart.bar();//.color('crimson');
         chart.left(50);
-        //chart.xScale().minimum("2 April 2019");
-        //chart.yScale().maximum("ПЕРШИЙ ІНВЕСТИЦІЙНИЙ БАНК");
-        //chart.yAxis().staggerMode(true);
+
         chart.yAxis().labels().width(200);
         let series = chart.bar(data).color('crimson');
         chart.labels(true);
         var labels = chart.xAxis().labels();
         labels.fontSize(7);
-        //let series = chart.bar(seriesData_1).color('crimson');
         chart.container("container");
         chart.draw();
 
@@ -455,78 +412,10 @@
                     } else {
                         x.style.display = "none";
                     }
-                    //throw new Error("Stop script");
-                    //button.removeEventListener('click');
-                   // div.removeEventListener('click', listener, false);
+
                 }
             },4000);
 
-        //function codeAddress(address) {
-        //    console.log(address);
-       // }
-
-       // var cancel = setInterval(incrementSeconds, 2000);
-
-        function incrementSeconds() {
-
-
-            seconds += 70;
-            seconds1 += 100;
-            seconds2 += 50;
-            seconds3 += 150;
-            seconds4 += 80;
-            el.innerText = "You have been here for " + seconds + " seconds.";
-
-/*            var data = [
-                {x: "John", value: 10000 + seconds},
-                {x: "Jake", value: 12000 + seconds4},
-                {x: "Peter", value: 13000 + seconds1,
-                    normal:   {
-                        fill: "#d6d45c",
-                        stroke: null,
-                        label: {enabled: true}
-                    },
-                    hovered:  {
-                        fill: "#d6d45c",
-                        stroke: null,
-                        label: {enabled: true}
-                    },
-                    selected: {
-                        fill: "#d6d45c",
-                        stroke: null,
-                        label: {enabled: true}
-                    }
-                },
-                {x: "James", value: 10000 + seconds2},
-                {x: "Mary", value: 9000 + seconds3}
-            ];*/
-
-/*            let data = [
-                ["John", 12000 + seconds1],
-                ["Jake", 11000 + seconds4],
-                ["Peter", 10000 + seconds3],
-                ["James", 15000 + seconds2],
-                ["Mary", 14000 + seconds]
-            ];*/
-            var data =[{"x":"ОЩАДБАНК","value":4586},{"x":"ПРИВАТБАНК","value":2620},{"x":"РАЙФФАЙЗЕН БАНК АВАЛЬ","value":626},{"x":"УКРСИББАНК","value":458},{"x":"УКРГАЗБАНК","value":246},{"x":"ПУМБ","value":216},{"x":"АКЦЕНТ-БАНК","value":193},{"x":"ПРАВЕКС-БАНК","value":183},{"x":"МЕГАБАНК","value":177},{"x":"СБЕРБАНК","value":173},{"x":"КРЕДІ АГРІКОЛЬ БАНК","value":169},{"x":"ПІВДЕННИЙ","value":142},{"x":"УНІВЕРСАЛ БАНК","value":123},{"x":"ПРОМІНВЕСТБАНК","value":121},{"x":"КРЕДОБАНК","value":111},{"x":"АЛЬФА-БАНК","value":106},{"x":"УКРЕКСІМБАНК","value":103},{"x":"ПОЛТАВА-БАНК","value":97},{"x":"ОТП БАНК","value":86},{"x":"КРЕДИТ-ДНІПРО","value":85},{"x":"ІДЕЯ БАНК","value":83},{"x":"ПРОКРЕДИТ БАНК","value":69},{"x":"ТАСКОМБАНК","value":58},{"x":"КОМІНВЕСТБАНК","value":49},{"x":"АЙБОКС БАНК","value":48},{"x":"МЕТАБАНК","value":44},{"x":"МТБ БАНК","value":43},{"x":"ПЕРШИЙ ІНВЕСТИЦІЙНИЙ БАНК","value":37},{"x":"ІНДУСТРІАЛБАНК","value":37},{"x":"ВОСТОК","value":36}]
-/*            var data = anychart.data.set([
-                ["Укргазбанк", 12000 + seconds1],
-                ["ОТП", 11000 + seconds4],
-                ["Акордбанк", 10000 + seconds3, "#009933", null, {enabled: true}],
-                ["Приватбанк", 15000 + seconds2],
-                ["Ощадбанк", 14000 + seconds],
-                ["Альфабанк", 8000 + seconds1],
-                ["Кредіагріколь", 5000 + seconds4],
-                ["Кредобанк", 2000 + seconds3],
-                ["Укрексімбанк", 3000 + seconds2],
-                ["Південний", 7000 + seconds],
-                ["Таскомбанк", 4000 + seconds1],
-                ["Укрексімбанк", 9000 + seconds3]
-            ]);*/
-            //var seriesData_2 = data.mapAs({x: 0, value: 1, fill: 3, stroke: 5, label: 6});
-
-            showChart(data);
-        }
 
         function showChart(selectedvalue) {
           $.getJSON('${pageContext.request.contextPath}/api/divisions/findall/' + selectedvalue, function(data) {
@@ -535,142 +424,14 @@
               labels.fontSize(7);
 
                 chart.data([]);
-                //chart.bar(JSON.stringify(data).replace("{enabled: true}",'{enabled: true}')).color('crimson');
                 chart.bar(data).color('crimson');
                 chart.container('container');
                 chart.draw();
                 })
-            //console.log(selectedvalue);
 
-            //var labels = chart.xAxis().labels();
-            //labels.height(5);
-            //labels.fontSize(7);
-
-            //var seriesData_2 = selectedvalue.mapAs({x: 0, value: 1, fill: 2, label: 3});
-
-            //var data = selectedvalue;
-            //chart.data(selectedvalue)
-
-            //chart.data([]);
-            //chart.bar(selectedvalue).color('crimson');
-
-            //chart.bar(selectedvalue);
-
-            //chart.container('container');
-            //chart.draw();
         }
 
     });
-
-   /*window.addEventListener('DOMContentLoaded', function() {
-
-        var data = [
-            ["John", 10000],
-            ["Jake", 12000],
-            ["Peter", 13000],
-            ["James", 10000],
-            ["Mary", 9000]
-        ];
-
-        let chart = anychart.bar();
-        let series = chart.bar(data);
-        chart.container("container");
-        chart.draw();
-
-        //init chart
-
-/!*        let chart = anychart.pie([{x: "пусто", value: 0}]);
-        chart.labels().position("outside");
-        let legend = chart.legend();
-        legend.maxWidth("100%");
-        legend.maxHeight("30%");
-        legend.itemsLayout("verticalExpandable");
-        legend.position("bottom");
-        legend.paginator().orientation("bottom");
-        chart.container("container");
-        chart.draw();*!/
-
-
-        //keep chart updated to match dropdown
-        const selectElem = document.querySelector('#butt');
-        selectElem.addEventListener('click', event => {
-            //showChartFor(event.target.value);
-        });
-        //showChartFor(selectElem.value);
-
-        /!*function showChartFor(selectedvalue) {
-           $.getJSON('${pageContext.request.contextPath}/api/clients/findallmanagerstatusforchart/' + selectedvalue, function(data) {
-
-                chart.data(data);
-                chart.container('container');
-                chart.draw();
-                });
-
-           console.log(selectedvalue);
-
-            var data = selectedvalue;
-
-            chart.data(data);
-            chart.container('container');
-            chart.draw();
-
-           /!* $('#clientslistbymanager').DataTable({
-                pageLength : 200,
-                ajax : {
-                    url : '${pageContext.request.contextPath}/api/clients/findallmanagerbyname/' + selectedvalue,
-                    dataSrc : ''
-                },
-                scrollx: true,
-                fixedHeader: {
-                    header: true,
-                },
-                paging: true,
-                select: true,
-                destroy: true,
-                columns : [{
-                    title : 'Змінити',
-                    data : 'pr',
-                    "render": function(data, type, row, meta){
-                        if(type === 'display'){
-                            data = '<a href="/mainform/updateclient/' + data + '">Змінити</a>';
-                        }
-                        return data;
-                    }
-                }, {
-                    title : 'ЄДРПОУ',
-                    data : 'pr',
-                    "render": function(data, type, row, meta){
-                        if(type === 'display'){
-                            data = '<a href="/mainform/updateclient/' + data + '">' + data + '</a>';
-                        }
-                        return data;
-                    }
-                }, {
-                    title : 'Назва клієнта',
-                    data : 'client_name'
-                }, {
-                    title : 'Дата останнього контакту',
-                    data : 'last_date_contact'
-                }, {
-                    title : 'Результат останнього контакту',
-                    data : 'last_client_result'
-                }, {
-                    title : 'Історія взаємовідносин з клієнтом/коментарі',
-                    data : 'client_history'
-                }, {
-                    title : 'Статус',
-                    data : 'status'
-                }, {
-                    title : 'Коментарі',
-                    data : 'comments'
-                }
-                ]
-            });
-
-            }*!/
-        }*!/
-    });*/
-
 
 
 </script>
