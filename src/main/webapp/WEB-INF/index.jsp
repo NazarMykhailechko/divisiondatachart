@@ -7,7 +7,7 @@
 <html>
 <head>
 
-    <title>Клієнти</title>
+    <title>Акордбанк</title>
     <%--<meta name="viewport" content="width=device-width, initial-scale=1.0">--%>
 <%--    <meta charset="utf-8" />--%>
 
@@ -377,13 +377,13 @@
 
 
         let chart = anychart.bar();//.color('crimson');
-        chart.left(50);
+        chart.left(30);
 
         chart.yAxis().labels().width(200);
         let series = chart.bar(data).color('crimson');
         chart.labels(true);
         var labels = chart.xAxis().labels();
-        labels.fontSize(6);
+        labels.fontSize(7);
         chart.container("container");
         chart.draw();
 
@@ -421,7 +421,7 @@
           $.getJSON('${pageContext.request.contextPath}/api/divisions/findall/' + selectedvalue, function(data) {
 
               var labels = chart.xAxis().labels();
-              labels.fontSize(6);
+              labels.fontSize(7);
 
                 chart.data([]);
                 chart.bar(data).color('crimson');
