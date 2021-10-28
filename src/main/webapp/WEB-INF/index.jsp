@@ -303,8 +303,8 @@
             color: #dc143c;
             font-size:8vw;
             font-weight:bold;
-            right:450px;
-            bottom:300px;
+            right:30%;
+            bottom:40%;
         }
         #hiddentext {
             z-index:100;
@@ -312,8 +312,8 @@
             color: dimgrey;
             font-size:3vw;
             font-weight:bold;
-            right:350px;
-            bottom:450px;
+            right:22%;
+            bottom:60%;
         }
 
         .textspec {
@@ -383,7 +383,7 @@
         let series = chart.bar(data).color('crimson');
         chart.labels(true);
         var labels = chart.xAxis().labels();
-        labels.fontSize(7);
+        labels.fontSize(6);
         chart.container("container");
         chart.draw();
 
@@ -421,7 +421,7 @@
           $.getJSON('${pageContext.request.contextPath}/api/divisions/findall/' + selectedvalue, function(data) {
 
               var labels = chart.xAxis().labels();
-              labels.fontSize(7);
+              labels.fontSize(6);
 
                 chart.data([]);
                 chart.bar(data).color('crimson');
