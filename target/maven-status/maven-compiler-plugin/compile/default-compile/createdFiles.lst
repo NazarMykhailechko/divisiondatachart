@@ -2,4 +2,6 @@ branchapp\controller\BranchController.class
 branchapp\dto\Division.class
 branchapp\controller\DivisionRestController.class
 branchapp\SpringBootWebRun.class
+branchapp\dto\DivsAll.class
 branchapp\dto\Divs.class
+Test.class

@@ -4,6 +4,7 @@ import javax.persistence.*;
 
 @NamedNativeQueries({
         @NamedNativeQuery(name = "Divisions", query = "SELECT bankname as x, summ as value, CASE glb WHEN '392' THEN '#ffff00' ELSE '#dc143c' END as fill FROM divisions where dates = ? order by summ desc limit 30", resultSetMapping = "Divisions"),
+        @NamedNativeQuery(name = "DivisionsAll", query = "SELECT bankname as x, summ as value, CASE glb WHEN '392' THEN '#ffff00' ELSE '#dc143c' END as fill, dates as dates FROM divisions order by summ desc", resultSetMapping = "DivisionsAll"),
 })
 
 @SqlResultSetMapping(name = "Divisions", classes = @ConstructorResult(targetClass = Divs.class,
@@ -12,6 +13,16 @@ import javax.persistence.*;
                 @ColumnResult(name = "value", type = int.class),
                 @ColumnResult(name = "fill")
                 //@ColumnResult(name = "dates")
+        }
+)
+)
+
+@SqlResultSetMapping(name = "DivisionsAll", classes = @ConstructorResult(targetClass = DivsAll.class,
+        columns = {
+                @ColumnResult(name = "x"),
+                @ColumnResult(name = "value", type = int.class),
+                @ColumnResult(name = "fill"),
+                @ColumnResult(name = "dates")
         }
 )
 )
