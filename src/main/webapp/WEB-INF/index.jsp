@@ -303,7 +303,7 @@
             color: #dc143c;
             font-size:6vw;
             font-weight:bold;
-            right:20%;
+            right:15%;
             bottom:30%;
         }
         #hiddentext {
@@ -312,7 +312,7 @@
             color: dimgrey;
             font-size:3vw;
             font-weight:bold;
-            right:9%;
+            right:7%;
             bottom:50%;
         }
 
