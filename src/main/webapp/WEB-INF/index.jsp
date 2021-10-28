@@ -300,25 +300,25 @@
         #seconds-counter {
             z-index:100;
             position:absolute;
-            color: #dc143c;
-            font-size:6vw;
+            color: darkblue;
+            font-size:5vw;
             font-weight:bold;
             right:15%;
-            bottom:30%;
+            bottom:20%;
         }
         #hiddentext {
             z-index:100;
             position:absolute;
-            color: dimgrey;
-            font-size:3vw;
+            color: black;
+            font-size:5vw;
             font-weight:bold;
-            right:7%;
-            bottom:50%;
+            right:13%;
+            bottom:35%;
         }
 
         .textspec {
             animation-name: tspec;
-            animation-duration: 100s;
+            animation-duration: 30s;
             animation-iteration-count: infinite;
             animation-timing-function: linear; /* step-start тоже */
         }
@@ -339,12 +339,12 @@
 
 <br>
 
-<audio src="/ChiMai.mp3"></audio>
+<audio src="/IFollowRivers.mp3"></audio>
 <%--<button id="butt">play</button--%>
-<input id="butt" onclick="disableButton(this)" type="submit" value="ЗМІНА ІНФРАСТРУКТУРИ АКОРДБАНКУ ЗА ОСТАННІ 6 РОКІВ (PUSH)" style="font-weight: bold;width:100.2%;margin-left: 2px;margin-right: 2px;margin-top: 5px;padding-right: 0px;padding-left: 0px;background-color: lightgrey;color: black">
+<input id="butt" onclick="disableButton(this)" type="submit" value="ЗМІНА ІНФРАСТРУКТУРИ АКОРДБАНКУ ЗА ОСТАННІ 6 РОКІВ (PUSH)" style="font-weight: bold;font-size:medium;width:100.2%;margin-left: 2px;margin-right: 2px;margin-top: 5px;padding-right: 0px;padding-left: 0px;background-color: lightgrey;color: black">
 <div id="container" style="position:center; top:25px; right:25px; width:100%; height: 85%; margin-left: 2px;margin-right: 2px;padding-right: 0px;padding-left: 0px">
     <div id="seconds-counter"></div>
-    <div id="hiddentext" class="textspec"  style="display:none">АКОРДБАНК відкрив 100 відділень і займає 11 місце!</div>
+    <div id="hiddentext" class="textspec"  style="display:none"><div style="text-align: center">АКОРДБАНК<br>відкрив 100 відділень<br>і займає 11 місце!</div></div>
     <%--<div id="hiddentext" class="textspec" style="font-size:100px;display:none">Check</div>--%>
 </div>
 
@@ -373,7 +373,8 @@
 
     button.addEventListener("click", () => {
 
-        var data =[{"x":"ОЩАДБАНК","value":4586},{"x":"ПРИВАТБАНК","value":2620},{"x":"РАЙФФАЙЗЕН БАНК АВАЛЬ","value":626},{"x":"УКРСИББАНК","value":458},{"x":"УКРГАЗБАНК","value":246},{"x":"ПУМБ","value":216},{"x":"АКЦЕНТ-БАНК","value":193},{"x":"ПРАВЕКС-БАНК","value":183},{"x":"МЕГАБАНК","value":177},{"x":"СБЕРБАНК","value":173},{"x":"КРЕДІ АГРІКОЛЬ БАНК","value":169},{"x":"ПІВДЕННИЙ","value":142},{"x":"УНІВЕРСАЛ БАНК","value":123},{"x":"ПРОМІНВЕСТБАНК","value":121},{"x":"КРЕДОБАНК","value":111},{"x":"АЛЬФА-БАНК","value":106},{"x":"УКРЕКСІМБАНК","value":103},{"x":"ПОЛТАВА-БАНК","value":97},{"x":"ОТП БАНК","value":86},{"x":"КРЕДИТ-ДНІПРО","value":85},{"x":"ІДЕЯ БАНК","value":83},{"x":"ПРОКРЕДИТ БАНК","value":69},{"x":"ТАСКОМБАНК","value":58},{"x":"КОМІНВЕСТБАНК","value":49},{"x":"АЙБОКС БАНК","value":48},{"x":"МЕТАБАНК","value":44},{"x":"МТБ БАНК","value":43},{"x":"ПЕРШИЙ ІНВЕСТИЦІЙНИЙ БАНК","value":37},{"x":"ІНДУСТРІАЛБАНК","value":37},{"x":"АКОРДБАНК","value":5}]
+        //var data =[{"x":"ОЩАДБАНК","value":4586},{"x":"ПРИВАТБАНК","value":2620},{"x":"РАЙФФАЙЗЕН БАНК АВАЛЬ","value":626},{"x":"УКРСИББАНК","value":458},{"x":"УКРГАЗБАНК","value":246},{"x":"ПУМБ","value":216},{"x":"АКЦЕНТ-БАНК","value":193},{"x":"ПРАВЕКС-БАНК","value":183},{"x":"МЕГАБАНК","value":177},{"x":"СБЕРБАНК","value":173},{"x":"КРЕДІ АГРІКОЛЬ БАНК","value":169},{"x":"ПІВДЕННИЙ","value":142},{"x":"УНІВЕРСАЛ БАНК","value":123},{"x":"ПРОМІНВЕСТБАНК","value":121},{"x":"КРЕДОБАНК","value":111},{"x":"АЛЬФА-БАНК","value":106},{"x":"УКРЕКСІМБАНК","value":103},{"x":"ПОЛТАВА-БАНК","value":97},{"x":"ОТП БАНК","value":86},{"x":"КРЕДИТ-ДНІПРО","value":85},{"x":"ІДЕЯ БАНК","value":83},{"x":"ПРОКРЕДИТ БАНК","value":69},{"x":"ТАСКОМБАНК","value":58},{"x":"КОМІНВЕСТБАНК","value":49},{"x":"АЙБОКС БАНК","value":48},{"x":"МЕТАБАНК","value":44},{"x":"МТБ БАНК","value":43},{"x":"ПЕРШИЙ ІНВЕСТИЦІЙНИЙ БАНК","value":37},{"x":"ІНДУСТРІАЛБАНК","value":37},{"x":"АКОРДБАНК","value":5}]
+        var data =[{"x":"ОЩАДБАНК","value":4586},{"x":"ПРИВАТБАНК","value":2620},{"x":"РАЙФФАЙЗЕН БАНК АВАЛЬ","value":626},{"x":"УКРСИББАНК","value":458},{"x":"УКРГАЗБАНК","value":246},{"x":"ПУМБ","value":216},{"x":"АКЦЕНТ-БАНК","value":193},{"x":"ПРАВЕКС-БАНК","value":183},{"x":"МЕГАБАНК","value":177},{"x":"СБЕРБАНК","value":173},{"x":"КРЕДІ АГРІКОЛЬ БАНК","value":169},{"x":"ПІВДЕННИЙ","value":142},{"x":"УНІВЕРСАЛ БАНК","value":123},{"x":"ПРОМІНВЕСТБАНК","value":121},{"x":"КРЕДОБАНК","value":111},{"x":"АЛЬФА-БАНК","value":106},{"x":"УКРЕКСІМБАНК","value":103},{"x":"ПОЛТАВА-БАНК","value":97},{"x":"ОТП БАНК","value":86},{"x":"АКОРДБАНК","value":5}]
 
         let chart = anychart.bar();//.color('crimson');
         chart.left(30);
@@ -382,7 +383,7 @@
         let series = chart.bar(data).color('crimson');
         chart.labels(true);
         var labels = chart.xAxis().labels();
-        labels.fontSize(7);
+        labels.fontSize(13);
         chart.container("container");
         chart.draw();
 
@@ -421,7 +422,7 @@
           $.getJSON('${pageContext.request.contextPath}/api/divisions/divsall/' + selectedvalue.substring(0,10), function(data) {
 
               var labels = chart.xAxis().labels();
-              labels.fontSize(7);
+              labels.fontSize(13);
 
                 chart.data([]);
                 chart.bar(data).color('crimson');
