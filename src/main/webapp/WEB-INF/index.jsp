@@ -384,6 +384,8 @@
         chart.labels(true);
         var labels = chart.xAxis().labels();
         labels.fontSize(13);
+        labels.fontColor("black");
+        labels.fontWeight(900);
         chart.container("container");
         chart.draw();
 
@@ -423,6 +425,8 @@
 
               var labels = chart.xAxis().labels();
               labels.fontSize(13);
+              labels.fontColor("black");
+              labels.fontWeight(900);
 
                 chart.data([]);
                 chart.bar(data).color('crimson');
