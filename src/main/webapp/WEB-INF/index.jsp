@@ -301,19 +301,19 @@
             z-index:100;
             position:absolute;
             color: #dc143c;
-            font-size:100px;
+            font-size:8vw;
             font-weight:bold;
-            right:550px;
+            right:450px;
             bottom:300px;
         }
         #hiddentext {
             z-index:100;
             position:absolute;
             color: dimgrey;
-            font-size:50px;
+            font-size:3vw;
             font-weight:bold;
             right:350px;
-            bottom:400px;
+            bottom:450px;
         }
 
         .textspec {
@@ -341,8 +341,8 @@
 
 <audio src="/ChiMai.mp3"></audio>
 <%--<button id="butt">play</button--%>
-<input id="butt" onclick="disableButton(this)" type="submit" value="Запустити презентацію" style="width: 98.9%;  margin-left: 8px;margin-top: 5px;background-color: crimson;color: white">
-<div id="container" style="position:center; top:25px; right:20px; width:1500px; height: 600px; margin-left: 8px">
+<input id="butt" onclick="disableButton(this)" type="submit" value="Запустити презентацію" style="width:100%;margin-left: 2px;margin-right: 2px;margin-top: 5px;padding-right: 0px;padding-left: 0px;background-color: crimson;color: white">
+<div id="container" style="position:center; top:25px; right:25px; width:100%; height: 85%; margin-left: 2px;margin-right: 2px;padding-right: 0px;padding-left: 0px">
     <div id="seconds-counter"></div>
     <div id="hiddentext" class="textspec"  style="display:none">АКОРДБАНК відкрив 100 відділень!</div>
     <%--<div id="hiddentext" class="textspec" style="font-size:100px;display:none">Check</div>--%>
