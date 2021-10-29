@@ -300,7 +300,7 @@
         #seconds-counter {
             z-index:100;
             position:absolute;
-            color: darkblue;
+            color: #00008b;
             font-size:5vw;
             font-weight:bold;
             right:15%;
@@ -376,12 +376,15 @@
         //var data =[{"x":"ОЩАДБАНК","value":4586},{"x":"ПРИВАТБАНК","value":2620},{"x":"РАЙФФАЙЗЕН БАНК АВАЛЬ","value":626},{"x":"УКРСИББАНК","value":458},{"x":"УКРГАЗБАНК","value":246},{"x":"ПУМБ","value":216},{"x":"АКЦЕНТ-БАНК","value":193},{"x":"ПРАВЕКС-БАНК","value":183},{"x":"МЕГАБАНК","value":177},{"x":"СБЕРБАНК","value":173},{"x":"КРЕДІ АГРІКОЛЬ БАНК","value":169},{"x":"ПІВДЕННИЙ","value":142},{"x":"УНІВЕРСАЛ БАНК","value":123},{"x":"ПРОМІНВЕСТБАНК","value":121},{"x":"КРЕДОБАНК","value":111},{"x":"АЛЬФА-БАНК","value":106},{"x":"УКРЕКСІМБАНК","value":103},{"x":"ПОЛТАВА-БАНК","value":97},{"x":"ОТП БАНК","value":86},{"x":"КРЕДИТ-ДНІПРО","value":85},{"x":"ІДЕЯ БАНК","value":83},{"x":"ПРОКРЕДИТ БАНК","value":69},{"x":"ТАСКОМБАНК","value":58},{"x":"КОМІНВЕСТБАНК","value":49},{"x":"АЙБОКС БАНК","value":48},{"x":"МЕТАБАНК","value":44},{"x":"МТБ БАНК","value":43},{"x":"ПЕРШИЙ ІНВЕСТИЦІЙНИЙ БАНК","value":37},{"x":"ІНДУСТРІАЛБАНК","value":37},{"x":"АКОРДБАНК","value":5}]
         var data =[{"x":"ОЩАДБАНК","value":4586},{"x":"ПРИВАТБАНК","value":2620},{"x":"РАЙФФАЙЗЕН БАНК АВАЛЬ","value":626},{"x":"УКРСИББАНК","value":458},{"x":"УКРГАЗБАНК","value":246},{"x":"ПУМБ","value":216},{"x":"АКЦЕНТ-БАНК","value":193},{"x":"ПРАВЕКС-БАНК","value":183},{"x":"МЕГАБАНК","value":177},{"x":"СБЕРБАНК","value":173},{"x":"КРЕДІ АГРІКОЛЬ БАНК","value":169},{"x":"ПІВДЕННИЙ","value":142},{"x":"УНІВЕРСАЛ БАНК","value":123},{"x":"ПРОМІНВЕСТБАНК","value":121},{"x":"КРЕДОБАНК","value":111},{"x":"АЛЬФА-БАНК","value":106},{"x":"УКРЕКСІМБАНК","value":103},{"x":"ПОЛТАВА-БАНК","value":97},{"x":"ОТП БАНК","value":86},{"x":"АКОРДБАНК","value":5}]
 
+
+
         let chart = anychart.bar();//.color('crimson');
         chart.left(30);
 
-        chart.yAxis().labels().width(200);
+        //chart.yAxis().labels().width(200);
         let series = chart.bar(data).color('crimson');
         chart.labels(true);
+        //chart.labels(true).background().enabled(true).stroke("red");
         var labels = chart.xAxis().labels();
         labels.fontSize(13);
         labels.fontColor("black");
@@ -389,6 +392,16 @@
         chart.container("container");
         chart.draw();
 
+        var count = chart.xAxis().labels().getLabelsCount();
+        for (var i = 0; i < count; i++) {
+            var label = chart.xAxis().labels().getLabel(i);
+            value = chart.xAxis().scale().ticks().get()[i];
+            if (value === "АКОРДБАНК") {
+                label.fontColor("red");
+                label.background().enabled(true).stroke("red");
+                label.draw();
+            }
+        }
 
         if (audio.paused) {
             audio.volume = 0.2;
@@ -432,6 +445,19 @@
                 chart.bar(data).color('crimson');
                 chart.container('container');
                 chart.draw();
+
+              var count = chart.xAxis().labels().getLabelsCount();
+              for (var i = 0; i < count; i++) {
+                  var label = chart.xAxis().labels().getLabel(i);
+                  value = chart.xAxis().scale().ticks().get()[i];
+                  if (value === "АКОРДБАНК") {
+                      label.fontColor("red");
+                      label.background().enabled(true).stroke("red");
+                      label.draw();
+                  }
+              }
+
+
                 })
 
         }
