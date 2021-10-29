@@ -339,7 +339,7 @@
 
 <br>
 
-<audio src="/LykkeLiIFollowRivers.mp3"></audio>
+<audio src="/Follow.mp3"></audio>
 <%--<button id="butt">play</button--%>
 <input id="butt" onclick="disableButton(this)" type="submit" value="ЗМІНА ІНФРАСТРУКТУРИ АКОРДБАНКУ ЗА ОСТАННІ 6 РОКІВ (PUSH)" style="font-weight: bold;font-size:medium;width:100.2%;margin-left: 2px;margin-right: 2px;margin-top: 5px;padding-right: 0px;padding-left: 0px;background-color: lightgrey;color: black">
 <div id="container" style="position:center; top:25px; right:25px; width:100%; height: 85%; margin-left: 2px;margin-right: 2px;padding-right: 0px;padding-left: 0px">
@@ -430,7 +430,7 @@
                     }
 
                 }
-            },900);
+            },500);
 
 
         function showChart(selectedvalue) {
