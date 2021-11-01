@@ -12,7 +12,7 @@ public class Test {
 
     public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
 /*        Gson g = new Gson();
-        DivsAll[] dto = new Gson().fromJson(new InputStreamReader(new FileInputStream("src/main/data.json"),"UTF-8"), DivsAll[].class);
+        DivsAll[] dto = new Gson().fromJson(new InputStreamReader(new FileInputStream("src/main/data111.json"),"UTF-8"), DivsAll[].class);
 
         List<DivsAll> divsAllList = Arrays.asList(dto);
 
