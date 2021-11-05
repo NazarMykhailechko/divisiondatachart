@@ -68,8 +68,8 @@ public class DivisionRestController {
         List<DivsAll> accord = divsAllList.stream().filter(d -> d.getDates().equals(data) &&
                 d.getX().equals("АКОРДБАНК")).collect(Collectors.toList());
 
-        temp.forEach(System.out::println);
-        accord.forEach(System.out::println);
+        //temp.forEach(System.out::println);
+        //accord.forEach(System.out::println);
         temp.addAll(accord);
         //temp.forEach(System.out::println);
 
