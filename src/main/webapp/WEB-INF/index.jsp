@@ -341,6 +341,30 @@
             100% { opacity: 0; }
         }
 
+        .textspec1 {
+            animation-name: tspec1;
+            animation-duration: 43s;
+            animation-iteration-count: initial;
+            animation-timing-function: linear; /* step-start тоже */
+            animation-fill-mode:  forwards;
+        }
+
+        @keyframes tspec1 {
+            0%   { opacity: 0; }
+            10%  { opacity: 1; }
+            90%  { opacity: 1; }
+            100% { opacity: 0; }
+            0%   { opacity: 0; }
+        }
+
+        .blink {
+            animation: blink 3s ; /* Параметры анимации */
+        }
+        @keyframes blink {
+            from { opacity: 1; /* Непрозрачный текст */ }
+            to { opacity: 0; /* Прозрачный текст */ }
+        }
+
     </style>
 </head>
 <body>
@@ -355,7 +379,7 @@
 <%--<button id="butt">play</button--%>
 <input id="butt" onclick="disableButton(this)" type="submit" value="ЗМІНА ІНФРАСТРУКТУРИ АКОРДБАНКУ ЗА ОСТАННІ 6 РОКІВ (PUSH)" style="font-weight: bold;font-size:medium;width:100.2%;margin-left: 2px;margin-right: 2px;margin-top: 5px;padding-right: 0px;padding-left: 0px;background-color: lightgrey;color: black">
 <div id="container" style="position:center; top:25px; right:25px; width:100%; height: 85%; margin-left: 2px;margin-right: 2px;padding-right: 0px;padding-left: 0px">
-    <div id="seconds-counter" style="display:block"></div>
+    <div id="seconds-counter"></div>
     <div id="hiddentext" class="textspec"  style="display:none"><div style="text-align: center">АКОРДБАНК<br>відкрив 100 відділень<br>і займає 11 місце!</div></div>
     <%--<div id="hiddentext" class="textspec" style="font-size:100px;display:none">Check</div>--%>
 </div>
@@ -437,7 +461,9 @@
                     } else {
                         x.style.display = "none";
                     }
-                    z.style.display = "none";
+                    z.classList.add("blink");
+                    setTimeout(fade, 1000);
+
                 }
 
                 el.innerText = addressArr[counter].replace("_",".").replace("_",".");
@@ -481,6 +507,12 @@
 
     });
 
+    var cnt = document.getElementById('seconds-counter');
+    var s = cnt.style;
+    function fade(){
+        s.transition="opacity 1s";
+        s.opacity=0;
+    }
 
 </script>
 
