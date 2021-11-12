@@ -35,7 +35,6 @@
 
         #container {
             border: 1px solid black;
-
         }
 
         #seconds-counter {
@@ -187,31 +186,31 @@
                     let y = document.getElementById("sm1");
                     y.style.display = "block";
                 }
-                if (counter === 15){
+                if (counter === 5){
                     let y = document.getElementById("sm1");
                     y.style.display = "none";
                     let y1 = document.getElementById("sm2");
                     y1.style.display = "block";
                 }
-                if (counter === 30){
+                if (counter === 22){
                     let y = document.getElementById("sm2");
                     y.style.display = "none";
                     let y1 = document.getElementById("sm3");
                     y1.style.display = "block";
                 }
-                if (counter === 50){
+                if (counter === 46){
                     let y = document.getElementById("sm3");
                     y.style.display = "none";
                     let y1 = document.getElementById("sm4");
                     y1.style.display = "block";
                 }
-                if (counter === 55){
+                if (counter === 67){
                     let y = document.getElementById("sm4");
                     y.style.display = "none";
                     let y1 = document.getElementById("sm5");
                     y1.style.display = "block";
                 }
-                if (counter === 60){
+                if (counter === 70){
                     let y = document.getElementById("sm5");
                     y.style.display = "none";
                     let y1 = document.getElementById("sm6");
