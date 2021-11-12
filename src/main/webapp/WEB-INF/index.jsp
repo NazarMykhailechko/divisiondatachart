@@ -91,7 +91,7 @@
             font-size:5vw;
             font-weight:bold;
             right:30%;
-            bottom:35%;
+            bottom:32%;
             width:15%;
         }
 
@@ -108,9 +108,12 @@
 <audio src="/IFollowRivers.mp3"></audio>
 <input id="butt" onclick="disableButton(this)" type="submit" value="ЗМІНА ІНФРАСТРУКТУРИ АКОРДБАНКУ ЗА ОСТАННІ 6 РОКІВ (PUSH)" style="font-weight: bold;font-size:medium;width:100.2%;margin-left: 2px;margin-right: 2px;margin-top: 5px;padding-right: 0px;padding-left: 0px;background-color: lightgrey;color: black">
 <div id="container" style="position:center; top:25px; right:25px; width:100%; height: 85%; margin-left: 2px;margin-right: 2px;padding-right: 0px;padding-left: 0px">
-    <img id="sm" class="smile" src="/cry.gif" style="display: none">
-    <img id="sm1" class="smile" src="/think.webp" style="display: none">
-    <img id="sm2" class="smile" src="/smile.webp" style="display: none">
+    <img id="sm1" class="smile" src="/1.jpeg" style="display: none">
+    <img id="sm2" class="smile" src="/2.jpeg" style="display: none">
+    <img id="sm3" class="smile" src="/3.jpg" style="display: none">
+    <img id="sm4" class="smile" src="/4.jpg" style="display: none">
+    <img id="sm5" class="smile" src="/5.jpeg" style="display: none">
+    <img id="sm6" class="smile" src="/6.jpeg" style="display: none">
     <div id="seconds-counter"></div>
     <div id="hiddentext" class="textspec"  style="display:none"><div style="text-align: center"><span style="color: red">Акорд</span><span style="color: grey">банк</span><br>відкрив перші 100 відділень<br>і займає 11 місце!</div></div>
 </div>
@@ -167,7 +170,7 @@
                     clearInterval(timer);
                     let x = document.getElementById("hiddentext");
                     let z = document.getElementById("seconds-counter");
-                    let y = document.getElementById("sm2");
+                    let y = document.getElementById("sm6");
 
                     if (x.style.display === "none") {
                         x.style.display = "block";
@@ -181,21 +184,41 @@
                 }
 
                 if (counter === 0){
-                    let y = document.getElementById("sm");
+                    let y = document.getElementById("sm1");
                     y.style.display = "block";
                 }
-                if (counter === 25){
-                    let y = document.getElementById("sm");
-                    y.style.display = "none";
-                    let y1 = document.getElementById("sm1");
-                    y1.style.display = "block";
-                }
-                if (counter === 50){
+                if (counter === 15){
                     let y = document.getElementById("sm1");
                     y.style.display = "none";
                     let y1 = document.getElementById("sm2");
                     y1.style.display = "block";
                 }
+                if (counter === 30){
+                    let y = document.getElementById("sm2");
+                    y.style.display = "none";
+                    let y1 = document.getElementById("sm3");
+                    y1.style.display = "block";
+                }
+                if (counter === 50){
+                    let y = document.getElementById("sm3");
+                    y.style.display = "none";
+                    let y1 = document.getElementById("sm4");
+                    y1.style.display = "block";
+                }
+                if (counter === 55){
+                    let y = document.getElementById("sm4");
+                    y.style.display = "none";
+                    let y1 = document.getElementById("sm5");
+                    y1.style.display = "block";
+                }
+                if (counter === 60){
+                    let y = document.getElementById("sm5");
+                    y.style.display = "none";
+                    let y1 = document.getElementById("sm6");
+                    y1.style.display = "block";
+                }
+
+
 
                 el.innerText = addressArr[counter].replace("_",".").replace("_",".");
                 showChart(addressArr[counter]);
