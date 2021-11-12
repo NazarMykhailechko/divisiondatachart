@@ -84,6 +84,17 @@
             to { opacity: 0; /* Прозрачный текст */ }
         }
 
+        .smile{
+            z-index:100;
+            position:absolute;
+            color: #00008b;
+            font-size:5vw;
+            font-weight:bold;
+            right:30%;
+            bottom:35%;
+            width:15%;
+        }
+
     </style>
 </head>
 <body>
@@ -97,8 +108,11 @@
 <audio src="/IFollowRivers.mp3"></audio>
 <input id="butt" onclick="disableButton(this)" type="submit" value="ЗМІНА ІНФРАСТРУКТУРИ АКОРДБАНКУ ЗА ОСТАННІ 6 РОКІВ (PUSH)" style="font-weight: bold;font-size:medium;width:100.2%;margin-left: 2px;margin-right: 2px;margin-top: 5px;padding-right: 0px;padding-left: 0px;background-color: lightgrey;color: black">
 <div id="container" style="position:center; top:25px; right:25px; width:100%; height: 85%; margin-left: 2px;margin-right: 2px;padding-right: 0px;padding-left: 0px">
+    <img id="sm" class="smile" src="/cry.gif" style="display: none">
+    <img id="sm1" class="smile" src="/think.webp" style="display: none">
+    <img id="sm2" class="smile" src="/smile.webp" style="display: none">
     <div id="seconds-counter"></div>
-    <div id="hiddentext" class="textspec"  style="display:none"><div style="text-align: center">АКОРДБАНК<br>відкрив 100 відділень<br>і займає 11 місце!</div></div>
+    <div id="hiddentext" class="textspec"  style="display:none"><div style="text-align: center"><span style="color: red">Акорд</span><span style="color: grey">банк</span><br>відкрив перші 100 відділень<br>і займає 11 місце!</div></div>
 </div>
 
 </body>
@@ -153,15 +167,34 @@
                     clearInterval(timer);
                     let x = document.getElementById("hiddentext");
                     let z = document.getElementById("seconds-counter");
+                    let y = document.getElementById("sm2");
 
                     if (x.style.display === "none") {
                         x.style.display = "block";
                     } else {
                         x.style.display = "none";
                     }
+                    y.style.display = "none";
                     z.classList.add("blink");
                     setTimeout(fade, 1000);
 
+                }
+
+                if (counter === 0){
+                    let y = document.getElementById("sm");
+                    y.style.display = "block";
+                }
+                if (counter === 25){
+                    let y = document.getElementById("sm");
+                    y.style.display = "none";
+                    let y1 = document.getElementById("sm1");
+                    y1.style.display = "block";
+                }
+                if (counter === 50){
+                    let y = document.getElementById("sm1");
+                    y.style.display = "none";
+                    let y1 = document.getElementById("sm2");
+                    y1.style.display = "block";
                 }
 
                 el.innerText = addressArr[counter].replace("_",".").replace("_",".");
