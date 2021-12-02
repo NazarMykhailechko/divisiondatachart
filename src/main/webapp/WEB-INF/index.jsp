@@ -43,8 +43,11 @@
             color: #00008b;
             font-size:5vw;
             font-weight:bold;
-            right:15%;
-            bottom:20%;
+/*            right:15%;
+            bottom:20%;*/
+            top: 80%;
+            left: 49%;
+            transform: translate(-50%, -50%);
         }
         #hiddentext {
             z-index:100;
@@ -90,10 +93,13 @@
             z-index:100;
             position:absolute;
             color: #00008b;
-            font-size:5vw;
-            font-weight:bold;
-            right:30%;
-            bottom:32%;
+  /*          font-size:5vw;
+            font-weight:bold;*/
+/*            right:30%;
+            bottom:32%;*/
+            top: 50%;
+            left: 49%;
+            transform: translate(-50%, -50%);
             width:15%;
         }
 
