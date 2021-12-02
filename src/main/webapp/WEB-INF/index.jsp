@@ -52,8 +52,11 @@
             color: black;
             font-size:4vw;
             font-weight:bold;
-            right:13%;
-            bottom:14%;
+/*            right:13%;
+            bottom:14%;*/
+            top: 50%;
+            left: 49%;
+            transform: translate(-50%, -50%);
         }
 
         .textspec {
