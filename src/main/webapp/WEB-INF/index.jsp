@@ -83,19 +83,20 @@
             to { opacity: 0; /* Прозрачный текст */ }
         }
 
-        .smile{
-            z-index:100;
-            position:absolute;
-            color: #00008b;
-            right:30%;
-            bottom:32%;
-/*            top: 50%;
-            left: 49%;
-            transform: translate(-50%, -50%);*/
-            //width: 16.9%;
-            height: 25%;
-            //max-width: 16.9%;
-        }
+
+            .smile {
+                z-index: 100;
+                position: absolute;
+                color: #00008b;
+                right: 30%;
+                bottom: 32%;
+
+                width: 100%;
+                height: 100%;
+                max-width: 16.9%;
+                max-height: 40%;
+            }
+
 
         /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
         @media screen and (min-width: 601px) {
