@@ -53,7 +53,7 @@
             font-size:5vw;
             font-weight:bold;
             right:13%;
-            top:50%;
+            margin-top:5%;
         }
 
         .textspec {
