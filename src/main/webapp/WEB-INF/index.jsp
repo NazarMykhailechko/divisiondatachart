@@ -53,7 +53,7 @@
             font-size:5vw;
             font-weight:bold;
             right:13%;
-            bottom:30%;
+            bottom:10%;
         }
 
         .textspec {
@@ -105,7 +105,7 @@
 <br>
 
 <audio src="/IFollowRivers.mp3"></audio>
-<input id="butt" onclick="disableButton(this)" type="submit" value="ЗМІНА ІНФРАСТРУКТУРИ АКОРДБАНКУ ЗА ОСТАННІ 6 РОКІВ (PUSH)" style="font-weight: bold;font-size:medium;width:100.2%;margin-left: 2px;margin-right: 2px;margin-top: 5px;padding-right: 0px;padding-left: 0px;background-color: lightgrey;color: black">
+<input id="butt" onclick="disableButton(this)" type="submit" value="ЗМІНА ІНФРАСТРУКТУРИ АКОРДБАНКУ ЗА ОСТАННІ 5 РОКІВ (PUSH)" style="font-weight: bold;font-size:medium;width:100.2%;margin-left: 2px;margin-right: 2px;margin-top: 5px;padding-right: 0px;padding-left: 0px;background-color: lightgrey;color: black">
 <div id="container" style="position:center; top:25px; right:25px; width:100%; height: 85%; margin-left: 2px;margin-right: 2px;padding-right: 0px;padding-left: 0px">
     <img id="sm1" class="smile" src="/1.jpeg" style="display: none">
     <img id="sm2" class="smile" src="/2.jpeg" style="display: none">
@@ -114,7 +114,7 @@
     <img id="sm5" class="smile" src="/5.jpeg" style="display: none">
     <img id="sm6" class="smile" src="/6.jpeg" style="display: none">
     <div id="seconds-counter"></div>
-    <div id="hiddentext" class="textspec"  style="display:none"><div style="text-align: center"><span style="color: red">Акорд</span><span style="color: grey">банк</span><br>відкрив перші 100 відділень<br>і займає 11 місце!</div></div>
+    <div id="hiddentext" class="textspec"  style="display:none"><div style="text-align: center"><span style="color: red">Акорд</span><span style="color: grey">банк</span><br><span style="line-height: 1.0">відкрив перші 100 відділень</span><br><span style="line-height: 1.0">і займає 11 місце!</span><br><span style="color: #00008b;line-height: 3.0">To Be Continued...</span></div></div>
 </div>
 
 </body>
@@ -178,7 +178,7 @@
                     }
                     y.style.display = "none";
                     z.classList.add("blink");
-                    setTimeout(fade, 1000);
+                    setTimeout(fade, 100);
 
                 }
 

@@ -14,10 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -56,24 +54,29 @@ public class DivisionRestController {
     }
 
     @RequestMapping(value = "divsall/{data}", method = RequestMethod.GET, produces = MimeTypeUtils.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Iterable<DivsAll>> divsAll(@PathVariable String data) throws FileNotFoundException, UnsupportedEncodingException {
+    public ResponseEntity<Iterable<DivsAll>> divsAll(@PathVariable String data) throws IOException {
 
-        DivsAll[] dto = new Gson().fromJson(new InputStreamReader(new FileInputStream("src/main/data.json"),"UTF-8"), DivsAll[].class);
+        List<DivsAll> result = new ArrayList<>();
 
-        List<DivsAll> divsAllList = Arrays.asList(dto);
+        try(InputStreamReader isr = new InputStreamReader(new FileInputStream("src/main/data.json"),"UTF-8")) {
 
-        List<DivsAll> temp = divsAllList.stream().filter(d -> d.getDates().equals(data) &&
-                !d.getX().equals("АКОРДБАНК")).limit(24).collect(Collectors.toList());//.forEach(System.out::println);
+            DivsAll[] dto = new Gson().fromJson(isr, DivsAll[].class);
 
-        List<DivsAll> accord = divsAllList.stream().filter(d -> d.getDates().equals(data) &&
-                d.getX().equals("АКОРДБАНК")).collect(Collectors.toList());
+            List<DivsAll> divsAllList = Arrays.asList(dto);
 
-        //temp.forEach(System.out::println);
-        //accord.forEach(System.out::println);
-        temp.addAll(accord);
-        //temp.forEach(System.out::println);
+            List<DivsAll> temp = divsAllList.stream().filter(d -> d.getDates().equals(data) &&
+                    !d.getX().equals("АКОРДБАНК")).limit(24).collect(Collectors.toList());//.forEach(System.out::println);
 
-        List<DivsAll> result = temp.stream().sorted(Comparator.comparingInt(DivsAll::getValue).reversed()).collect(Collectors.toList());
+            List<DivsAll> accord = divsAllList.stream().filter(d -> d.getDates().equals(data) &&
+                    d.getX().equals("АКОРДБАНК")).collect(Collectors.toList());
+
+            //temp.forEach(System.out::println);
+            //accord.forEach(System.out::println);
+            temp.addAll(accord);
+            //temp.forEach(System.out::println);
+
+            result = temp.stream().sorted(Comparator.comparingInt(DivsAll::getValue).reversed()).collect(Collectors.toList());
+        }
         //result.forEach(System.out::println);
 
         //DivsAll[] res = result.toArray(new DivsAll[0]);
