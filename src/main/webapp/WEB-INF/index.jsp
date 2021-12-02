@@ -45,7 +45,7 @@
             font-weight:bold;
             right:15%;
             //bottom:20%;
-            top:70%;
+            top:68%;
         }
         #hiddentext {
             z-index:100;
@@ -54,7 +54,8 @@
             font-size:4vw;
             font-weight:bold;
             right:13%;
-            bottom:14%;
+            //bottom:14%;
+            top:35%;
         }
 
         .textspec {
