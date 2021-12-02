@@ -93,7 +93,7 @@
             left: 49%;
             transform: translate(-50%, -50%);*/
             width: auto;
-            height: 45%;
+            height: 35%;
             //max-width: 20%;
         }
 
