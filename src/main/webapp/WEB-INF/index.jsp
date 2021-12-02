@@ -91,8 +91,8 @@
                 right: 30%;
                 bottom: 32%;
 
-                width: 20vw;
-                height: 20vw;
+                //width: 22vw;
+                height: 21vw;
                 //max-width: 16.9%;
                 //max-height: 40%;
             }
