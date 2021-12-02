@@ -44,7 +44,8 @@
             font-size:5vw;
             font-weight:bold;
             right:15%;
-            bottom:20%;
+            //bottom:20%;
+            top:70%;
         }
         #hiddentext {
             z-index:100;
@@ -88,7 +89,7 @@
                 z-index: 100;
                 position: absolute;
                 color: #00008b;
-                right: 30%;
+                right: 25%;
                 bottom: 32%;
                 width: 30%;
                 height: 45%;
