@@ -91,10 +91,10 @@
                 right: 30%;
                 bottom: 32%;
 
-                width: 100%;
-                height: 100%;
-                max-width: 16.9%;
-                max-height: 40%;
+                width: 20vw;
+                height: 20vw;
+                //max-width: 16.9%;
+                //max-height: 40%;
             }
 
 
