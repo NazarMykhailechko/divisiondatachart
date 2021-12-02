@@ -93,8 +93,8 @@
             left: 49%;
             transform: translate(-50%, -50%);*/
             width: auto;
-            height: 30%;
-            max-width: 20%;
+            height: auto;
+            max-width: 16.9%;
         }
 
         /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
