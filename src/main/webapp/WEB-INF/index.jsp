@@ -92,8 +92,8 @@
 /*            top: 50%;
             left: 49%;
             transform: translate(-50%, -50%);*/
-            width: 25%;
-            height: 45%;
+            width: 20%;
+            height: 35%;
             //max-width: 16.9%;
         }
 
