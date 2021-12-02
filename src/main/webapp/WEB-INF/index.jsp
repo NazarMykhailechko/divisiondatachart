@@ -94,7 +94,7 @@
             transform: translate(-50%, -50%);*/
             width: auto;
             height: 35%;
-            //max-width: 20%;
+            max-width: 20%;
         }
 
         /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
