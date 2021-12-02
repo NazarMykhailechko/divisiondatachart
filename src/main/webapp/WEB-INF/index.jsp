@@ -43,11 +43,8 @@
             color: #00008b;
             font-size:5vw;
             font-weight:bold;
-/*            right:15%;
-            bottom:20%;*/
-            top: 80%;
-            left: 49%;
-            transform: translate(-50%, -50%);
+            right:15%;
+            bottom:20%;
         }
         #hiddentext {
             z-index:100;
@@ -55,11 +52,8 @@
             color: black;
             font-size:4vw;
             font-weight:bold;
-/*            right:13%;
-            bottom:14%;*/
-            top: 50%;
-            left: 49%;
-            transform: translate(-50%, -50%);
+            right:13%;
+            bottom:14%;
         }
 
         .textspec {
@@ -93,13 +87,13 @@
             z-index:100;
             position:absolute;
             color: #00008b;
-  /*          font-size:5vw;
-            font-weight:bold;*/
-/*            right:30%;
-            bottom:32%;*/
-            top: 50%;
+            font-size:5vw;
+            font-weight:bold;
+            right:30%;
+            bottom:32%;
+/*            top: 50%;
             left: 49%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);*/
             width:15%;
         }
 
@@ -128,7 +122,7 @@
 <br>
 
 <audio src="/IFollowRivers.mp3"></audio>
-<input id="butt" onclick="disableButton(this)" type="submit" value="ЗМІНА ІНФРАСТРУКТУРИ АКОРДБАНКУ ЗА ОСТАННІ 5 РОКІВ (PUSH)" style="font-weight: bold;font-size:medium;width:100.2%;margin-left: 2px;margin-right: 2px;margin-top: 5px;padding-right: 0px;padding-left: 0px;background-color: lightgrey;color: black">
+<input id="butt" onclick="disableButton(this)" type="submit" value="ДИНАМІКА МЕРЕЖІ ВІДДІЛЕНЬ АКОРДБАНКУ ЗА ОСТАННІ 5 РОКІВ (PUSH)" style="font-weight: bold;font-size:medium;width:100.2%;margin-left: 2px;margin-right: 2px;margin-top: 5px;padding-right: 0px;padding-left: 0px;background-color: lightgrey;color: black">
 <div id="container" style="position:center; top:25px; right:25px; width:100%; height: 85%; margin-left: 2px;margin-right: 2px;padding-right: 0px;padding-left: 0px">
     <img id="sm1" class="smile" src="/1.jpeg" style="display: none">
     <img id="sm2" class="smile" src="/2.jpeg" style="display: none">
