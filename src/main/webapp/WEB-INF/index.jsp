@@ -92,7 +92,7 @@
                 bottom: 32%;
                 width: 20%;
                 height: 40%;
-                object-fit: fill;
+                object-fit: cover;
                 //width: 22vw;
                 //height: 21vw;
                 //max-width: 16.9%;
