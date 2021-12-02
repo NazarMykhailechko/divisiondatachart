@@ -87,14 +87,14 @@
             z-index:100;
             position:absolute;
             color: #00008b;
-            font-size:5vw;
-            font-weight:bold;
             right:30%;
             bottom:32%;
 /*            top: 50%;
             left: 49%;
             transform: translate(-50%, -50%);*/
-            width:15%;
+            width: auto;
+            height: 45%;
+            //max-width: 20%;
         }
 
         /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
