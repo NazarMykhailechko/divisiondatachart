@@ -50,7 +50,7 @@
             z-index:100;
             position:absolute;
             color: black;
-            //font-size:5vw;
+            font-size:4vw;
             font-weight:bold;
             right:13%;
             bottom:14%;
